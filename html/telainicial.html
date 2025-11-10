@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeaPass - Encontre Hotéis Incríveis</title>
+  <link rel="stylesheet" href="../css/inicialtela.css">
+</head>
+
+<body class="home-page">
+
+  <!-- Header com Menu Hamburguer -->
+  <header class="topbar">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="../images/logo_seaapass.PNG" alt="Logo SeaPass" class="logo">
+        <span class="logo-text">SeaPass</span>
+      </div>
+
+      <!-- Menu Hamburguer -->
+      <div class="menu-hamburguer">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburguer-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <nav class="menu">
+          <a href="hoteis.html" class="menu-item">
+            <span class="menu-icon">🏨</span>
+            Hotéis
+          </a>
+          <a href="reservas.html" class="menu-item">
+            <span class="menu-icon">📅</span>
+            Reservas
+          </a>
+          <a href="conta.html" class="menu-item">
+            <span class="menu-icon">👤</span>
+            Conta
+          </a>
+          <a href="configuracoes.html" class="menu-item">
+            <span class="menu-icon">⚙️</span>
+            Configurações
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Encontre sua experiência perfeita</h1>
+      <p class="hero-subtitle">Descubra hotéis exclusivos com conforto e sofisticação</p>
+      
+      <!-- Barra de Busca -->
+      <div class="search-container">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Pesquisar destinos, hotéis..." class="search-input" id="searchInput">
+          <button class="search-btn" onclick="performSearch()">Buscar</button>
+        </div>
+        
+        <!-- Resultados da Busca -->
+        <div class="search-results" id="searchResults">
+          <div class="results-header">
+            <h3>Resultados da busca</h3>
+            <button class="close-results" onclick="closeSearch()">×</button>
+          </div>
+          <div class="results-list" id="resultsList">
+            <!-- Resultados serão inseridos via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="content-container">
+    
+    <!-- Seção Hotéis em Destaque -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Hotéis em Destaque</h2>
+        <a href="hoteis.html" class="see-all">Ver todos</a>
+      </div>
+      
+      <div class="hotels-grid">
+        <a href="CopacabanaPalaceDetalhes.html" class="hotel-card" data-hotel="Copacabana Palace" data-city="Rio de Janeiro">
+          <div class="card-image">
+            <img src="../images/copacabana-palace.jpg" alt="Copacabana Palace" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">5.0</span>
+              </div>
+              <div class="price">R$ 890<span>/noite</span></div>
+            </div>
+            <div class="featured-badge">Destaque</div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Copacabana Palace</h3>
+            <p class="hotel-location">Rio de Janeiro, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🏊 Piscina</span>
+              <span class="amenity">🍽️ Restaurante</span>
+              <span class="amenity">🏋️ Academia</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="reservaunique.html" class="hotel-card" data-hotel="Hotel Paradise" data-city="São Paulo">
+          <div class="card-image">
+            <img src="../images/sasha-kaunas-Fk9d0cxYqC4-unsplash.jpg" alt="Hotel Paradise" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐</span>
+                <span class="rating-text">4.2</span>
+              </div>
+              <div class="price">R$ 650<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Hotel Paradise</h3>
+            <p class="hotel-location">São Paulo, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🏊 Piscina</span>
+              <span class="amenity">🚗 Estacionamento</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="reservaunique.html" class="hotel-card" data-hotel="Hotel Unique" data-city="São Paulo">
+          <div class="card-image">
+            <img src="../images/hotelunique.jpg" alt="Hotel Unique" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐</span>
+                <span class="rating-text">4.5</span>
+              </div>
+              <div class="price">R$ 720<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Hotel Unique</h3>
+            <p class="hotel-location">São Paulo, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🍽️ Restaurante</span>
+              <span class="amenity">🏋️ Academia</span>
+              <span class="amenity">🚗 Estacionamento</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="ptangara.html" class="hotel-card" data-hotel="Palacio Tangara" data-city="São Paulo">
+          <div class="card-image">
+            <img src="../images/tangara.jpg" alt="Palacio Tangara" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">4.9</span>
+              </div>
+              <div class="price">R$ 950<span>/noite</span></div>
+            </div>
+            <div class="featured-badge">Luxo</div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Palacio Tangara</h3>
+            <p class="hotel-location">São Paulo, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🏊 Piscina</span>
+              <span class="amenity">🍽️ Restaurante</span>
+              <span class="amenity">💆 Spa</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Seção Mais Procurados -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Mais Procurados</h2>
+        <a href="hoteis.html" class="see-all">Ver todos</a>
+      </div>
+      
+      <div class="hotels-grid">
+        <a href="tt.html" class="hotel-card" data-hotel="Crystal Palace" data-city="Florianópolis">
+          <div class="card-image">
+            <img src="../images/sala.jpg" alt="Crystal Palace" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">4.8</span>
+              </div>
+              <div class="price">R$ 820<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Crystal Palace</h3>
+            <p class="hotel-location">Florianópolis, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🏊 Piscina</span>
+              <span class="amenity">🍽️ Restaurante</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tt.html" class="hotel-card" data-hotel="Liverpool Hotel" data-city="Salvador">
+          <div class="card-image">
+            <img src="../images/quarto.jpg" alt="Liverpool Hotel" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐</span>
+                <span class="rating-text">4.1</span>
+              </div>
+              <div class="price">R$ 480<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Liverpool Hotel</h3>
+            <p class="hotel-location">Salvador, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🏋️ Academia</span>
+              <span class="amenity">🚗 Estacionamento</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tt.html" class="hotel-card" data-hotel="Recife Hotel" data-city="Recife">
+          <div class="card-image">
+            <img src="../images/mark-champs-Id2IIl1jOB0-unsplash.jpg" alt="Recife Hotel" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">4.7</span>
+              </div>
+              <div class="price">R$ 780<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Recife Hotel</h3>
+            <p class="hotel-location">Recife, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🏊 Piscina</span>
+              <span class="amenity">💆 Spa</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="reservaunique.html" class="hotel-card" data-hotel="Euro Palace" data-city="Porto Alegre">
+          <div class="card-image">
+            <img src="../images/roberto-nickson-EeeKjwm2vDo-unsplash.jpg" alt="Euro Palace" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐</span>
+                <span class="rating-text">4.3</span>
+              </div>
+              <div class="price">R$ 690<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Euro Palace</h3>
+            <p class="hotel-location">Porto Alegre, Brasil</p>
+            <div class="amenities">
+              <span class="amenity">🍽️ Restaurante</span>
+              <span class="amenity">🏋️ Academia</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Seção Perto de Você -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Perto de Você</h2>
+        <a href="hoteis.html" class="see-all">Ver todos</a>
+      </div>
+      
+      <div class="hotels-grid">
+        <a href="reservaunique.html" class="hotel-card" data-hotel="Hotel Iônia" data-city="Local">
+          <div class="card-image">
+            <img src="../images/meklay-yotkhamsay-AAZaK31x6FM-unsplash.jpg" alt="Hotel Iônia" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐</span>
+                <span class="rating-text">4.0</span>
+              </div>
+              <div class="price">R$ 550<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Hotel Iônia</h3>
+            <p class="hotel-location">2.5 km de distância</p>
+            <div class="amenities">
+              <span class="amenity">🚗 Estacionamento</span>
+              <span class="amenity">🏋️ Academia</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tt.html" class="hotel-card" data-hotel="Pousada Zero" data-city="Local">
+          <div class="card-image">
+            <img src="../images/visualsofdana-T5pL6ciEn-I-unsplash.jpg" alt="Pousada Zero" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">4.9</span>
+              </div>
+              <div class="price">R$ 920<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Pousada Zero</h3>
+            <p class="hotel-location">1.8 km de distância</p>
+            <div class="amenities">
+              <span class="amenity">🏊 Piscina</span>
+              <span class="amenity">💆 Spa</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tt.html" class="hotel-card" data-hotel="Pousada United" data-city="Local">
+          <div class="card-image">
+            <img src="../images/rod-long-2P_ifaetDm0-unsplash.jpg" alt="Pousada United" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐</span>
+                <span class="rating-text">4.2</span>
+              </div>
+              <div class="price">R$ 480<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Pousada United</h3>
+            <p class="hotel-location">3.2 km de distância</p>
+            <div class="amenities">
+              <span class="amenity">🍽️ Restaurante</span>
+              <span class="amenity">🚗 Estacionamento</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="tt.html" class="hotel-card" data-hotel="Hotel Real" data-city="Local">
+          <div class="card-image">
+            <img src="../images/redes-com-palmeiras - Copia.jpg" alt="Hotel Real" />
+            <div class="card-overlay">
+              <div class="rating">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">4.8</span>
+              </div>
+              <div class="price">R$ 850<span>/noite</span></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="hotel-name">Hotel Real</h3>
+            <p class="hotel-location">4.1 km de distância</p>
+            <div class="amenities">
+              <span class="amenity">🏊 Piscina</span>
+              <span class="amenity">🍽️ Restaurante</span>
+              <span class="amenity">💆 Spa</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SeaPass</h3>
+        <p>Encontre as melhores experiências hoteleiras com conforto e sofisticação.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <a href="hoteis.html">Hotéis</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="conta.html">Minha Conta</a>
+      </div>
+      <div class="footer-section">
+        <h4>Suporte</h4>
+        <a href="#">Ajuda</a>
+        <a href="#">Contato</a>
+        <a href="#">Políticas</a>
+        <a href="#">Desenvolvedores</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SeaPass. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/inicialtela.js"></script>
+</body>
+</html>

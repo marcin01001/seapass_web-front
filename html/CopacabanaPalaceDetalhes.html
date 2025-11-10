@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copacabana Palace - SeaPass</title>
+  <link rel="stylesheet" href="../css/CopacabanaPalaceDetalhes.css">
+</head>
+
+<body class="hotel-details-page">
+
+  <!-- Header com Menu Hamburguer -->
+  <header class="topbar">
+    <div class="header-content">
+      <a href="../html/telainicial.html" class="back-button">← Voltar</a>
+      <div class="logo-container">
+        <img src="../images/logo_seaapass.PNG" alt="Logo SeaPass" class="logo">
+        <span class="logo-text">SeaPass</span>
+      </div>
+
+      <!-- Menu Hamburguer -->
+      <div class="menu-hamburguer">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburguer-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <nav class="menu">
+          <a href="../html/telainicial.html" class="menu-item">
+            <span class="menu-icon">🏠</span>
+            Início
+          </a>
+          <a href="hoteis.html" class="menu-item">
+            <span class="menu-icon">🏨</span>
+            Hotéis
+          </a>
+          <a href="reservas.html" class="menu-item">
+            <span class="menu-icon">📅</span>
+            Reservas
+          </a>
+          <a href="conta.html" class="menu-item">
+            <span class="menu-icon">👤</span>
+            Minha Conta
+          </a>
+          <a href="configuracoes.html" class="menu-item">
+            <span class="menu-icon">⚙️</span>
+            Configurações
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="hotel-details-container">
+    
+    <!-- Galeria de Imagens em Destaque -->
+    <section class="gallery-section">
+      <div class="main-image">
+        <img src="../images/copacabana-palace.jpg" alt="Copacabana Palace" id="mainImage">
+        <div class="image-badge">
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+          <span class="rating">5.0</span>
+        </div>
+      </div>
+      <div class="image-thumbnails">
+        <div class="thumbnail active" onclick="changeImage('../images/copacabana-palace.jpg')">
+          <img src="../images/copacabana-palace.jpg" alt="Vista frontal">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../images/quarto.jpg')">
+          <img src="../images/quarto.jpg" alt="Quarto de luxo">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../images/sala.jpg')">
+          <img src="../images/sala.jpg" alt="Área comum">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../images/mark-champs-Id2IIl1jOB0-unsplash.jpg')">
+          <img src="../images/mark-champs-Id2IIl1jOB0-unsplash.jpg" alt="Piscina">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../images/visualsofdana-T5pL6ciEn-I-unsplash.jpg')">
+          <img src="../images/visualsofdana-T5pL6ciEn-I-unsplash.jpg" alt="Restaurante">
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout de Conteúdo -->
+    <div class="content-wrapper">
+      
+      <!-- Conteúdo Principal -->
+      <div class="main-content">
+        
+        <!-- Informações do Hotel -->
+        <section class="hotel-basic-info">
+          <div class="hotel-header">
+            <div class="hotel-title">
+              <h1>Copacabana Palace</h1>
+              <div class="location">
+                <span class="location-icon">📍</span>
+                Av. Atlântica, 1702 - Copacabana, Rio de Janeiro
+              </div>
+            </div>
+            <div class="quick-actions">
+              <button class="btn-share" onclick="shareHotel()">
+                <span>📤</span>
+                Compartilhar
+              </button>
+              <button class="btn-favorite" onclick="toggleFavorite()">
+                <span>❤️</span>
+                Favorito
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Comodidades -->
+        <section class="amenities-section">
+          <h2>Comodidades do Hotel</h2>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <span class="amenity-icon">🏊</span>
+              <div class="amenity-info">
+                <strong>Piscina</strong>
+                <span>Piscina olímpica aquecida</span>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <span class="amenity-icon">🍽️</span>
+              <div class="amenity-info">
+                <strong>Restaurante</strong>
+                <span>Culinária internacional</span>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <span class="amenity-icon">🏋️</span>
+              <div class="amenity-info">
+                <strong>Academia</strong>
+                <span>Equipamentos modernos</span>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <span class="amenity-icon">💆</span>
+              <div class="amenity-info">
+                <strong>Spa & Bem-estar</strong>
+                <span>Tratamentos exclusivos</span>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <span class="amenity-icon">🚗</span>
+              <div class="amenity-info">
+                <strong>Estacionamento</strong>
+                <span>Valet service gratuito</span>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <span class="amenity-icon">🛎️</span>
+              <div class="amenity-info">
+                <strong>Serviço de Quarto</strong>
+                <span>24 horas</span>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <span class="amenity-icon">📶</span>
+              <div class="amenity-info">
+                <strong>Wi-Fi</strong>
+                <span>Internet de alta velocidade</span>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <span class="amenity-icon">🏖️</span>
+              <div class="amenity-info">
+                <strong>Acesso à Praia</strong>
+                <span>Privativo na orla</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Descrição -->
+        <section class="description-section">
+          <h2>Sobre o Copacabana Palace</h2>
+          <div class="description-content">
+            <p>O Copacabana Palace é um ícone da hotelaria mundial, localizado na famosa orla de Copacabana. Com mais de 100 anos de história, este hotel lendário oferece o máximo em luxo, conforto e sofisticação.</p>
+            
+            <div class="highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⭐</span>
+                <div>
+                  <strong>Experiência Premium</strong>
+                  <span>Serviço personalizado 5 estrelas</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🌅</span>
+                <div>
+                  <strong>Vista Privilegiada</strong>
+                  <span>Vista deslumbrante do mar</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🎭</span>
+                <div>
+                  <strong>Rica História</strong>
+                  <span>Patrimônio cultural desde 1923</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tipos de Quarto -->
+        <section class="rooms-section">
+          <h2>Nossas Acomodações</h2>
+          <div class="rooms-grid">
+            <div class="room-card">
+              <div class="room-image">
+                <img src="../images/quarto.jpg" alt="Quarto Deluxe">
+                <div class="room-badge">Mais Popular</div>
+              </div>
+              <div class="room-info">
+                <h3>Quarto Deluxe</h3>
+                <p class="room-size">30m² • Vista parcial do mar</p>
+                <div class="room-features">
+                  <span>🛏️ 1 cama de casal</span>
+                  <span>🚿 Banheiro de mármore</span>
+                  <span>📺 Smart TV 55"</span>
+                  <span>☕ Máquina de café</span>
+                </div>
+                <div class="room-price">
+                  <span class="price">R$ 890</span>
+                  <span class="period">/noite</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-card">
+              <div class="room-image">
+                <img src="../images/sala.jpg" alt="Suíte Junior">
+                <div class="room-badge premium">Luxo</div>
+              </div>
+              <div class="room-info">
+                <h3>Suíte Junior</h3>
+                <p class="room-size">45m² • Vista para o mar • Varanda</p>
+                <div class="room-features">
+                  <span>🛏️ 1 cama king size</span>
+                  <span>🚿 Banheiro com hidromassagem</span>
+                  <span>🏙️ Varanda privativa</span>
+                  <span>🍷 Frigobar completo</span>
+                </div>
+                <div class="room-price">
+                  <span class="price">R$ 1.200</span>
+                  <span class="period">/noite</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="room-card">
+              <div class="room-image">
+                <img src="../images/mark-champs-Id2IIl1jOB0-unsplash.jpg" alt="Suíte Presidencial">
+                <div class="room-badge vip">VIP</div>
+              </div>
+              <div class="room-info">
+                <h3>Suíte Presidencial</h3>
+                <p class="room-size">80m² • Vista panorâmica • 2 quartos</p>
+                <div class="room-features">
+                  <span>🛏️ 2 quartos separados</span>
+                  <span>💆 Área de spa privativa</span>
+                  <span>👨‍🍳 Serviço de mordomo</span>
+                  <span>🍷 Adega particular</span>
+                </div>
+                <div class="room-price">
+                  <span class="price">R$ 2.500</span>
+                  <span class="period">/noite</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Avaliações -->
+        <section class="reviews-section">
+          <div class="reviews-header">
+            <h2>Avaliações dos Hóspedes</h2>
+            <div class="overall-rating">
+              <div class="rating-score">5.0</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="review-count">428 avaliações</div>
+            </div>
+          </div>
+
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">MS</div>
+                <div class="reviewer-details">
+                  <strong>Maria Silva</strong>
+                  <span class="review-date">15 Jan 2024</span>
+                </div>
+              </div>
+              <div class="review-rating">⭐⭐⭐⭐⭐</div>
+              <p class="review-text">"Experiência incrível! O atendimento foi impecável e a localização é perfeita. Quarto espaçoso e muito limpo. Com certeza voltarei!"</p>
+            </div>
+
+            <div class="review-card">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">JS</div>
+                <div class="reviewer-details">
+                  <strong>João Santos</strong>
+                  <span class="review-date">10 Jan 2024</span>
+                </div>
+              </div>
+              <div class="review-rating">⭐⭐⭐⭐⭐</div>
+              <p class="review-text">"Hotel espetacular! Café da manhã maravilhoso e a vista do quarto é de tirar o fôlego. A equipe foi muito atenciosa em todos os detalhes."</p>
+            </div>
+
+            <div class="review-card">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">AP</div>
+                <div class="reviewer-details">
+                  <strong>Ana Pereira</strong>
+                  <span class="review-date">05 Jan 2024</span>
+                </div>
+              </div>
+              <div class="review-rating">⭐⭐⭐⭐⭐</div>
+              <p class="review-text">"Simplesmente perfeito! Desde o check-in até o check-out, tudo foi excelente. O spa é maravilhoso e os quartos são impecáveis."</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar de Reserva -->
+      <aside class="reservation-sidebar">
+        <div class="reservation-card">
+          <div class="reservation-header">
+            <h3>Sua Reserva</h3>
+            <div class="price-display">
+              <div class="price-main">R$ 890</div>
+              <div class="price-details">
+                <span class="price-label">por noite</span>
+                <span class="tax-info">+ taxas e impostos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reservation-features">
+            <div class="feature-item">
+              <span class="feature-icon">🔒</span>
+              <span>Pagamento seguro</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span>Cancelamento grátis</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🎯</span>
+              <span>Melhor preço garantido</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">⭐</span>
+              <span>Reserva instantânea</span>
+            </div>
+          </div>
+
+          <a href="reserva.html?hotel=copacabana-palace&price=890" class="btn-reserve">
+            <span class="btn-icon">🏨</span>
+            Fazer Reserva Agora
+          </a>
+
+          <div class="availability-info">
+            <div class="availability-badge">
+              <span class="dot"></span>
+              <span>Disponível para as datas selecionadas</span>
+            </div>
+            <div class="quick-info">
+              <span>📞 Precisa de ajuda?</span>
+              <a href="tel:+551199999999">(11) 9999-9999</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+
+  </main>
+  
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SeaPass</h3>
+        <p>Encontre as melhores experiências hoteleiras com conforto e sofisticação.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <a href="hoteis.html">Hotéis</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="conta.html">Minha Conta</a>
+      </div>
+      <div class="footer-section">
+        <h4>Suporte</h4>
+        <a href="#">Ajuda</a>
+        <a href="#">Contato</a>
+        <a href="#">Políticas</a>
+        <a href="#">Desenvolvedores</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SeaPass. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/CopacabanaPalaceDetalhes.js"></script>
+</body>
+</html>
